@@ -2,4 +2,4 @@
 
 Repositório para exercícios da Trybe
 
-Pratique bastante e beba água
+testando git pull
