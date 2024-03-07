@@ -2,4 +2,4 @@
 
 Repositório para exercícios da Trybe
 
-testando git pull..
+testando git pull.. ..
