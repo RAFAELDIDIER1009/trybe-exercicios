@@ -86,12 +86,25 @@ padding-bottom: 15px;
   .Pais-Filhos {
     background-color: rgb(236, 227, 215);
     display: flex;
+   padding-top: 30px;
   }
 
   .Pais-Filhos div {
     width: 80%;
   margin: auto ;
-    
+  padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 30px;
+  }
+
+  .Pais-Filhos h1 {
+    padding: 35px 0;
+  font-size: 20px;
+  }
+
+  .Pais-Filhos h4 {
+    padding: 35px 0;
+  font-size: 15px;
   }
 
   
