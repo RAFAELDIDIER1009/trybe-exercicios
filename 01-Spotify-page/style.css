@@ -15,12 +15,9 @@ header div {
   background-color: black;
 display: flex;
 margin: auto;
+padding-bottom: 15px;
 }
 
-
-section div {
-  
-}
 
 .menu {
   display: flex;
@@ -41,37 +38,52 @@ section div {
 
 .Família {
   background-color: rgb(160, 195, 210) ;
-  display: flex;
-  color: black;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto ;
-  }
+  color: black; 
+  padding-left: 40px; 
+}
 
-  
+.Família div {
+  width: 80%;
+  margin: auto ;
+   }
 
   .Família h1 {
-    display: flex;
-  margin: 20px 20px 20px 20px;
+  padding: 35px 0;
+  font-size: 35px;
   }
 
-  .Família h3 { 
-    margin-bottom: 15px;
-    margin-top: 15px;
-     padding-top: 20px
+  .Família h3 {
+  padding-bottom: 40px;
+  font-size: 17px;
   }
 
-  .Família button { 
-    margin-top: 15px;
-    margin-bottom: 15px;
+  .Família p {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12px;
+  }
+  
+  .Família p a {
+    color: black;
   }
 
-  .Família p { 
-    margin-left: 15px;
-    margin-top: 15px;
-  margin-bottom: 20px;
+  #btn-comece-agora {
+    background-color: black;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 100px;
+  border: 1px solid black
   }
+
+  #btn-ver-planos {
+  background-color: rgb(160, 195, 210);
+  color: white;
+  padding: 13px 25px;
+  border: 1px solid white;
+  border-radius: 100px;
+  }
+   
+
 
   .Pais-Filhos {
     background-color: rgb(236, 227, 215);
