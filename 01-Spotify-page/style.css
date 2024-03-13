@@ -142,6 +142,30 @@ padding-bottom: 15px;
   padding-bottom: 10px;
 }
 
+.best-family {
+background-color: rgb(160, 195, 210);
+text-align: center
+}
+
+.best-family h1{
+font-size: 30px;
+padding: 40px 0
+
+}
+
+.best-family h2{
+font-size: 20px;
+padding: 30px 0
+}
+
+.texto-best-family {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-direction: column
+}
+
+
 
 
 
