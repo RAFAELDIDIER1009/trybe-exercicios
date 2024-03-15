@@ -209,7 +209,7 @@ margin-top: 35px;
   height: 400px;
 }
 
-.all-plan {
+.section-chose-plan {
   background-color: #efefef;
 }
 
@@ -243,7 +243,6 @@ margin-top: 35px;
 height: 700px;
 max-width: 900px;
 margin: auto;
-
 }
 
 .plan-style {
@@ -258,6 +257,59 @@ margin: auto;
   max-width: 180px;
   font-size: 15px;
 }
+
+.free-month {
+background-color: rgb(22, 121, 202);
+  color: white;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.unique-payment {
+  color: rgb(22, 121, 202);
+  border: 1px solid rgb(22, 121, 202);
+  border-radius: 2px;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.price {
+  text-align: left;
+}
+
+.plan-style hr {
+  width: 100%;
+  margin: 10px 0;
+}
+ 
+.plan-style ol {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
+list-style-type: "✔ ";
+}
+
+.btn-comece-agora {
+  background-color: black;
+  color: white;
+  padding: 13px 40px;
+  border-radius: 100px;
+  border: 1px solid black;
+  margin: auto;
+  }
+
+  .conditions, .conditions a {
+    color: rgb(83, 83, 83);
+    font-size: 13px;
+  }
+
+
+
+
+
 
 
 
