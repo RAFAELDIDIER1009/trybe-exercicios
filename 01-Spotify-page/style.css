@@ -1,6 +1,7 @@
 *{
  margin: 0;
   padding-top: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -28,7 +29,10 @@ padding-bottom: 15px;
 
 .menu li {
   margin-left: 20px;
-  
+}
+
+.menu li:hover {
+  color: #1ed760;
 }
 
 .spotify-logo { 
@@ -75,12 +79,21 @@ padding-bottom: 15px;
   border: 1px solid black
   }
 
+  #btn-comece-agora:hover {
+    padding: 17px 32px;
+  }
+
   #btn-ver-planos {
   background-color: rgb(160, 195, 210);
   color: white;
   padding: 13px 25px;
   border: 1px solid white;
   border-radius: 100px;
+  margin-left: 20px;
+  }
+
+  #btn-ver-planos:hover {
+    padding: 17px 32px;
   }
    
   .Pais-Filhos {
@@ -303,10 +316,49 @@ list-style-type: "✔ ";
 
   .conditions, .conditions a {
     color: rgb(83, 83, 83);
-    font-size: 13px;
+    font-size: 10px;
   }
 
+  footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 70px 10%;
+  }
 
+ footer div ul {
+  color: #919496;
+  list-style-type: none;
+ }
+
+ footer a {
+  color: white;
+  text-decoration: none;
+ }
+
+ footer li:nth-child(1) {
+  padding-bottom: 20px;
+ }
+
+ footer li {
+  padding: 10px 20px;
+  font-size: 15px;
+ }
+
+ footer img {
+  width: 150px;
+  padding-right: 20px;
+ }
+
+footer i {
+  color: white;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+footer a:hover {
+  color: #1ed760;
+}
 
 
 
