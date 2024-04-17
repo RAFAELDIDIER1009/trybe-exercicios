@@ -1,10 +1,11 @@
-// Exescicio 1
+// Exercicio 2
 
-let num1 = 10
-let num2 = 5;
+let valor;
+let num = 20
 
-console.log(num1 + num2);
-console.log(num1 - num2);
-console.log(num1 * num2);
-console.log(num1 / num2);
-console.log(num1 % num2);
+if (num > 10) {
+  valor = 'Xablau';
+} else (num < 10); {
+  valor = 'Zablou';
+};
+console.log(valor);
