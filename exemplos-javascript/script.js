@@ -1,15 +1,19 @@
-// Exercicio 3
+// Exercicio 4
 
-let num1 = 6;
-let num2 = 4;
-let num3 = 10;
+let ang1 = 60;
+let ang2 = 60;
+let ang3 = 0;
 
-if (num1 > num2 && num1 > num3) {
-  console.log('O maior número é:' + num1);
-} else if (num2 > num1 && num2 > num3) {
-  console.log('O maior número é o:' + num2);
-} else if (num3 > num1 && num3 > num2) {
-  console.log('O maior número é:' + num3);
+let sumOfAngs = ang1 + ang2 + ang3;
+
+let angPositives = ang1 > 0 && ang2 > 0 && ang3 > 0;
+
+if (angPositives) {
+  if (sumOfAngs === 180) {
+    console.log(true);
+  } else {
+    console.log(false);
+  };
 } else {
-  console.log("Vishh! Tem números iguais.");
-};
+  console.log('Erro: Angulo invalido.');
+}
