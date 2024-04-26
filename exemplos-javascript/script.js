@@ -1,19 +1,26 @@
-// Exercicio 4
+// Exercicio 5
 
-let ang1 = 60;
-let ang2 = 60;
-let ang3 = 0;
+let chesspiece = 'pafe';
 
-let sumOfAngs = ang1 + ang2 + ang3;
-
-let angPositives = ang1 > 0 && ang2 > 0 && ang3 > 0;
-
-if (angPositives) {
-  if (sumOfAngs === 180) {
-    console.log(true);
-  } else {
-    console.log(false);
-  };
-} else {
-  console.log('Erro: Angulo invalido.');
+switch (chesspiece.toLocaleLowerCase()) {
+  case 'rei':
+    console.log('Rei -> Uma casa para ualquer direção.');
+    break;
+  case 'rainha':
+    console.log('Rainha -> Diagonal, lateral e adiante e para trás.');
+    break;
+  case 'bispo':
+    console.log('Bispo -> Em diagonais.');
+    break;
+  case 'cavalo':
+    console.log('Cavalo -> Movimentos em L, tres casas para frente uma para lateral.');
+    break;
+  case 'torre':
+    console.log('Torre -> segue reto sem pular.');
+    break;
+  case 'peão':
+    console.log('Peão -> Devagar se vai lonje, apenas uma por vez.');
+    break;
+  default:
+    console.log('Erro, peça invçalida');
 }
