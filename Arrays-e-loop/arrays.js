@@ -1,3 +1,6 @@
-const array = [1, 2, 3, 4, 5, 'Gus'];
+// Exrcício 01 Arrays
+ 
+const menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+const menuServices = (menu[Array.length]);
 
-console.log(array[array.length - 1]);
+console.log(menuServices);
