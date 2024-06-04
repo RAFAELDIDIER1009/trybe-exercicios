@@ -5,4 +5,6 @@ for (index = 0; index < numbers.length; index += 1) {
   result += numbers[index];
 };
 
-console.log(result);
+let avagere = result / numbers.length;
+
+console.log(avagere);
