@@ -1,9 +1,6 @@
-// Exrcício 02 Arrays
+const groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia', 'Macarrão'];
 
-const menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-
-const total = menu.push('Contato', 'Número');
-
-
-console.log(menu[Array.length -1]);
-console.log(total);
+for (let index = 0; index < groceryList.length; index += 1) {
+  const currentItem = groceryList[index];
+  console.log(currentItem);
+};
