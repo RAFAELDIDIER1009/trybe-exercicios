@@ -1,14 +1,12 @@
-const numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let result = 0;
+let n = 3;
+let symbol = '*';
+let inputLine = '';
 
-for (let index = 0; index < numbers.length; index += 1) {
-  if (numbers[index] % 2 !== 0) {
-    result += 1;
-  }
+for (let lineIndex = 0; lineIndex < n; lineIndex += 1){
+  inputLine = inputLine + symbol;
 };
 
-if (result === 0) {
-  console.log('Nenhum valor ímpar foi encontrado');
-} else {
-  console.log(result);
-};
+for (let lineIndex = 0; lineIndex < n; lineIndex += 1){
+  console.log(inputLine);
+}
+
