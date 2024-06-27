@@ -1,15 +1,19 @@
 const lotteryNumbers = [];
-const firstGame = [4, 8, 15, 16, 23, 42,];
+const firstGame = [5, 8, 20, 16, 23, 42,];
 
-// Sorteio dos números
-for (let index = 0; index < 6; index += 1) {
- let randomNumber = (Math.ceil(Math.random() * 60));
-if (lotteryNumbers.includes(randomNumber)) {
-  index -= 1;
-} else {
-  lotteryNumbers.push(randomNumber);
+// Sorteio dos números com função
+const generateLotteryNumbers = (quantidade, maxNumber, array) => {
+  for (let index = 0; index < quantidade; index += 1) {
+   let randomNumber = (Math.ceil(Math.random() * maxNumber));
+  if (array.includes(randomNumber)) {
+    index -= 1;
+  } else {
+    array.push(randomNumber);
+  }
+  };
 }
-};
+//invocar função
+generateLotteryNumbers(7, 70, lotteryNumbers);
 
 // Comparação do sorteio com o meu jogo
 let numberOfHits = 0;
