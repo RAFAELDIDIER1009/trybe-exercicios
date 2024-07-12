@@ -16,4 +16,4 @@ address: {
 }
 };
 
-console.log(Object.entries(macDonalds));
+console.log(macDonalds.address.unitName.newShopping);
