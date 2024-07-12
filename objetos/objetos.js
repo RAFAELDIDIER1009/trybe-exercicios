@@ -16,4 +16,4 @@ address: {
 }
 };
 
-console.log(macDonalds.address.unitName.newShopping);
+console.log(macDonalds.bigMac);
