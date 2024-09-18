@@ -1,9 +1,17 @@
 const data = require('./data');
 
-// Adicionar uma propriedade para cada elemento
-const addProperty = (data, propName, propValue) => data.map((card) => ({...card, [propName]: propValue,}));
-////sprad operator espalhar o objeto em um objeto, ter todos os elementos em um só array
+// Criar uma string para cada carta com seu ataque e defesa
+
+const getCardAtkAndDef = (cards) => {
+return cards.map((card) => {
+  if (card.atk !== undefined && card.def !== undefined) {
+    return `A carta ${card.name} possui o ataque ${card.atk} e defesa de ${card.def}`;
+  } 
+   return `esta carta não possui ataque e/ou defesa.`;
+})
+};
+
+console.log(getCardAtkAndDef(data.cards));
 
 
-console.log(addProperty(data.cards, 'game', 'Yu-Gi-Oh!'));
 
