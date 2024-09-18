@@ -1,13 +1,9 @@
-const data = require ('./data');
+const data = require('./data');
 
-/* const newArray = [];
+// Adicionar uma propriedade para cada elemento
+const addProperty = (data, propName, propValue) => data.map((card) => ({...card, [propName]: propValue,}));
+////sprad operator espalhar o objeto em um objeto, ter todos os elementos em um só array
 
-for (let index = 0; index < data.types.length; index += 1) {
-  newArray.push(data.types[index].name);
-}
 
-console.log(newArray); */
+console.log(addProperty(data.cards, 'game', 'Yu-Gi-Oh!'));
 
-const newArrayMap = data.types.map((type) => type.name);
-
-console.log(newArrayMap);
