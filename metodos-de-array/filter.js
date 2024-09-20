@@ -1,8 +1,20 @@
 const data = require('./data');
 
-//exiba todas as cartas com o ataque maior que 2000
+//Exibir todas as cartas de um determinado tipo da seguinte forma
 
-const getCardsByAtk = (data, atkNumber) => data.filter((card) => card.atk > atkNumber);
+/*
+[
+ { typeId: 1, name: 'Blue-eyes Whithe Dragon'}
+ { typeId: 1, name: 'Red-Eyes Black Dragon'}
+ { typeId: 1, name: 'Dragon Queen of Tragic Endings'}
+]
+ */
 
+const getCardsByType = (data, cardType) => { //função do tipo de cada carta
+ const FilterResult = data.filter((card) => card.typeId === cardType);  //filtro de todas as cartas id 1
+const mapResult = FilterResult.map((card) => ({ typeId: card.typeId, name: card.name})); //obj criado com map alterando o array
 
-console.log(getCardsByAtk(data.cards, 3000));
+ return mapResult; // imprimindo o novo array com obj
+}
+
+console.log(getCardsByType(data.cards, 3)); // log com parametros da função
