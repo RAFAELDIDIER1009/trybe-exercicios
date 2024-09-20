@@ -10,12 +10,8 @@ const data = require('./data');
 ]
  */
 
-const getCardsByType = (data, cardType) => { //função do tipo de cada carta
- const FilterResult = data
+const getCardsByType = (data, cardType) => data
  .filter((card) => card.typeId === cardType) //filtro criado novo array
- .map((card) => ({ typeId: card.typeId, name: card.name})); // o resultado ja ligaod com o map
-
- return FilterResult; 
-}
+ .map((card) => ({ typeId: card.typeId, name: card.name})); // o resultado ja ligado com o map
 
 console.log(getCardsByType(data.cards, 3)); // log com parametros da função
