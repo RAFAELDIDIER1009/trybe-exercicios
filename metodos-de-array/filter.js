@@ -11,7 +11,7 @@ const data = require('./data');
  */
 
 const getCardsByType = (data, cardType) => data
- .filter((card) => card.typeId === cardType) //filtro criado novo array
- .map((card) => ({ typeId: card.typeId, name: card.name})); // o resultado ja ligado com o map
+ .filter(({ typeId }) => typeId === cardType) //filtro criado novo array com desestruturação do obj
+ .map(( {typeId, name} ) => ({ typeId, name })); // o resultado ja ligado com o map, a chave e o valor o mesmo nome, deixa só um
 
 console.log(getCardsByType(data.cards, 3)); // log com parametros da função
