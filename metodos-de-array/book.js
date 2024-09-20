@@ -52,9 +52,9 @@ books: [
   },
 ]
 
-const formattedBookNames = () => books.map((book) => (`${book.name} - ${book.genre} - ${book.author}`));
+const formattedBookNames = (books) => books.map((book) => (`${book.name} - ${book.genre} - ${book.author}`));
 
-const nameAndAge = () => {
+const nameAndAge = (names) => {
   return books.map((book) => (
     {
       author: book.author.name,
@@ -63,4 +63,4 @@ const nameAndAge = () => {
   ))
 };
 
-console.log(nameAndAge);
+console.log(nameAndAge(names));

@@ -13,5 +13,3 @@ return cards.map((card) => {
 
 console.log(getCardAtkAndDef(data.cards));
 
-
-
