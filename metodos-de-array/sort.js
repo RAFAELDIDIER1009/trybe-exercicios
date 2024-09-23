@@ -1,7 +1,17 @@
-const array = [1, 6, 3, 2, 9, 8, 5, 12, 33, 4, 7, 0]; // array de numeros
+const data = require('./data');
 
-const sortArray = array.sort((a, b) => b - a); // ordenar com numeros de dois algoritimos: crescente a - b e decrescente b - a
+//Pegue todas as cartas que possuem atk e coloque em ordem crescente por ataque
 
-console.log(sortArray);
+/*
+[
+ { name: 'D.D. Crow', atk: 100}
+]
+ */
+
+const sortCardsByAtk = (data) => data
+.filter((card) => card.atk !== undefined)
+.map(({ name, atk}) => ({ name, atk }))
+.sort((a, b) => a.atk - b.atk);
 
 
+console.log(sortCardsByAtk(data.cards));
