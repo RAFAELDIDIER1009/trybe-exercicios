@@ -85,13 +85,18 @@ const countries = [
   }
 ];
 
-const getNewCountries = (propPlanet, propEarth) => {
- countries.forEach((prop) => prop[propPlanet] = propEarth) 
-};
+const countryInfoArray = [];
 
-getNewCountries('Planet', 'Earth');
+ countries.forEach((country) => {
+  const countryInfo = {
+    name: country.name,
+    currencyCode: country.currencies[0].code,
+    currencyName: country.currencies[0].name,
+  };
+  countryInfoArray.push(countryInfo);
+ });
 
-console.log(countries);
+console.log(countryInfoArray);
 
 
   
