@@ -1,11 +1,14 @@
 const data = require('./data')
 
-//adicionar a propriedade game em todos os elementos do array cards
+//pegar todas as cartas de um determinado tipo
 
-const addProperty = (propKey, propValue) => {
- data.cards.forEach((card) => card[propKey] = propValue)   //criar propriedade que não existe com forEach
+const getCardsByType = (...cardType) => {
+  return data.cards
+    .filter(({ typeId }) => cardType
+     .find((type) => type === typeId))
+     .map(({ typeId, name }) => ({ typeId, name }))
+     .sort((a, b) => a.typeId - b.typeId)
 };
 
-addProperty('game', 'Yu-Gi-Oh!');
+console.log(getCardsByType(1, 2, 3));
 
-console.log(data.cards);
