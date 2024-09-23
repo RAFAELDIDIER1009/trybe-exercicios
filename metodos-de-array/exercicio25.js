@@ -85,18 +85,17 @@ const countries = [
   }
 ];
 
-const countryInfoArray = [];
+const findCountry = (countryArray, countryName) => {
+  const result = countries.find((country) => country.name === countryName);
 
- countries.forEach((country) => {
-  const countryInfo = {
-    name: country.name,
-    currencyCode: country.currencies[0].code,
-    currencyName: country.currencies[0].name,
-  };
-  countryInfoArray.push(countryInfo);
- });
+if (!result) return 'País não encontrado!';
 
-console.log(countryInfoArray);
+return result;
+};
+
+console.log(findCountry(countries, 'India'));
+
+
 
 
   
