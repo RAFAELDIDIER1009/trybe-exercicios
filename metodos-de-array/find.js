@@ -1,11 +1,23 @@
 const data = require('./data');
 
-//encontre uma carta de acordo com o seu nome
+//encontre a primeira carta de acordo com seu filtro
 
-const findCard = (data, cardName) => data
-.find((card) => card.name === cardName);
+const firstCardByType = (typeName) => {
+  const getType = data.types.find((type) => type.name === typeName);
+  const getCard = data.cards.find(({ typeId }) => typeId === getType.id);
 
- 
-console.log(findCard(data.cards, 'Dark Magician'));
+  return {
+    typeId: getType.id,
+    typeName: getType.name,
+    cardName: getCard.name,
+  }
+};
+
+
+console.log(firstCardByType('Spellcaster'));
+
+
+
+
 
 
