@@ -40,7 +40,6 @@ main {
   font-style: normal;
   font-weight: 700;
   line-height: 145%;
-  /* 26.1px */
 }
 
 .inputs-identificação {
@@ -50,17 +49,16 @@ main {
   gap: 16px;
 }
 
-.input-name,
-.input-email {
+.input-name, .input-email {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 5px;
+  flex: 1 0 0;
 }
 
 .inputs-identificação label {
-  align-self: stretch;
   color: var(--gray-9, #212529);
   font-family: Inter;
   font-size: 16px;
@@ -72,7 +70,6 @@ main {
 .inputs-identificação input[type="text"],
 .inputs-identificação input[type="email"] {
   color: var(--other-black, #000);
-  flex: 1 0 0;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -80,6 +77,7 @@ main {
   line-height: 40px;
   border: 1px solid var(--gray-4, #CED4DA);
   border-radius: 8px;
+  width: 230px;
 }
 
  
