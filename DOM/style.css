@@ -49,7 +49,8 @@ main {
   gap: 16px;
 }
 
-.input-name, .input-email {
+.input-name,
+.input-email {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,5 +81,77 @@ main {
   width: 230px;
 }
 
- 
+.tamanho {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
 
+.div-logo-lanche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.div-logo-lanche h4 {
+  color: var(--other-black, #000);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145%;
+}
+
+.div-opções-lanches {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.lanche {
+  display: flex;
+  height: 69.369px;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid var(--gray-4, #CED4DA);
+}
+
+.tamanho-lanche {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tamanho-lanche div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.opcao-lanche {
+  color: var(--other-black, #000);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%;
+  margin: 0;
+}
+
+.preco {
+  color: var(--orange-8, #E8590C);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155%;
+  margin: 0;
+}
