@@ -4,16 +4,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
-  margin: 10px 10px;
-}
-
-.principal {
-  display: flex;
-  width: 511px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  margin-left: 10%
+  margin: 20px 20px;
 }
 
 .envie-seu-pedido {
@@ -53,9 +44,10 @@ main {
 
 .inputs-identificação {
   display: flex;
-  width: 511px;
+  width: 540px;
   align-items: flex-start;
   gap: 16px;
+ 
 }
 
 .input-name,
@@ -380,7 +372,7 @@ main {
 .div-logo-comentario h4 {
   color: var(--other-black, #000);
   font-family: Inter;
-  font-size: 16px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 600;
   line-height: 155%;
@@ -403,6 +395,7 @@ textarea {
   line-height: 40px;
   padding: 10px;
   height: 100px;
+  width: 400px;
 }
 
 .termos-aceite {
@@ -472,14 +465,70 @@ textarea {
 
 .canto-laranja {
   width: 421.736px;
-height: 500.431px;
-flex-shrink: 0;
-border-radius: 0px 0px 0px 260px;
-background: var(--orange-8, #E8590C);
+  height: 500.431px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 0px 260px;
+  background: var(--orange-8, #E8590C);
+}
+
+.principal {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+form {
+  margin-left: 60px;
 }
 
 body {
+  margin: 0;
+}
+
+.ticket {
+  display: none;
+  width: 405px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: var(--orange-0, #FFF4E6);
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  color: var(--other-black, #000);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  font-family: inter;
+  /* 18.2px */
+}
+
+.ticket-id {
+  color: var(--orange-8, #E8590C);
+  text-align: center;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+ font-family: inter;
+ margin: 10px 0;
+}
+
+.itens-lista {
   display: flex;
-  justify-content: space-between;
-  margin: 0px;
+flex-direction: column;
+gap: 32px;
+align-self: stretch;
+text-align: left;
+}
+
+.itens-lista ol {
+  list-style-type: none;
+}
+
+.itens-lista h3 {
+  text-align: right;
+  margin-right: 40px;
+  padding-top: 20px;
 }

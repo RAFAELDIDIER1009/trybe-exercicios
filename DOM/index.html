@@ -9,19 +9,17 @@
 </head>
 
 <body>
-
-  <main>
-    <header>
-      <img src="./images/logo-lanche.svg" alt="logo">
-    </header>
-
-    <div class="principal">
-
-
-      <h1 class="envie-seu-pedido">Envie seu pedido</h1>
+  
+  <div class="principal">
+    <main>
+      <header>
+        <img src="./images/logo-lanche.svg" alt="logo">
+      </header>
 
       <form action="" method="get">
 
+        <h1 class="envie-seu-pedido">Envie seu pedido</h1>
+        
         <div class="div-identificação">
           <div class="div-logo-identificação">
             <img src="./images/logo-avatar.svg" alt="logo-avatar">
@@ -31,12 +29,12 @@
           <div class="inputs-identificação">
             <div class="input-name">
               <label for="name">Nome</label>
-              <input type="text" name="" id="name">
+              <input type="text" name="Nome" id="name">
             </div>
 
             <div class="input-email">
               <label for="email">Email</label>
-              <input type="email" email="" id="email">
+              <input type="email" name="Email" id="email">
             </div>
           </div>
         </div>
@@ -185,7 +183,7 @@
               <h4>Algum comentário?</h4>
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Digite seu comentário aqui!"></textarea>
+            <textarea name="comentário" id="" cols="30" rows="10" placeholder="Digite seu comentário aqui!"></textarea>
 
           </div>
 
@@ -195,17 +193,35 @@
           </div>
 
           <div class="botoes">
-            <button class="btn-enviar">Enviar pedido</button>
+            <button type="submit" class="btn-enviar">Enviar pedido</button>
             <button class="btn-recuperar">Recuperar pedido anterior</button>
           </div>
-
       </form>
-
-  </main>
+    </main>
+    <div class="canto-laranja"></div>
   </div>
 
-  <div class="canto-laranja"></div>
+ <aside class="ticket">
+  <br>
+  <br>
 
+   ==  RAFA LANCHES  ==
+   <br>
+    <br>
+    Aqui você não vai ser mais feliz, vai ser apenas cheio
+    <br>
+    <p class="ticket-id">Pedido n<sup>o</sup> <samp id="ticket-number"></samp></p>
+    
+    <div class="itens-lista">
+      <ol id="orderlist"></ol>
+    </div>
+
+    Valeu por nunca mais não voltar 
+    <br>
+    <br>
+    <br>
+    
+  </aside>
 </body>
 
 </html>
