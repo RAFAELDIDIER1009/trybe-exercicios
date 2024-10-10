@@ -1,11 +1,18 @@
 const inputName = document.getElementById('name'); 
 
-const inputEmail = document.querySelector('div')
+const inputEmail = document.querySelector('#email')
 
 const form = document.querySelector('form')
 
 form.addEventListener('submit', (event) => {
  event.preventDefault();
-  console.log(event.target);
+
+  let orderinfo = {};
+
+  orderinfo.Nome = inputName.value; 
+  orderinfo.Email = inputEmail.value;
+
+  console.log(orderinfo);
+  
   
 })
