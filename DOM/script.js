@@ -36,8 +36,6 @@ atualizarQuantidade(btnMenosLanchinho, btnMaisLanchinho, qtdLanchinho);
 atualizarQuantidade(btnMenosOvo, btnMaisOvo, qtdOvo);
 atualizarQuantidade(btnMenosAbacaxi, btnMaisAbacaxi, qtdAbacaxi);
 
-
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -45,6 +43,14 @@ form.addEventListener('submit', (event) => {
 
   orderinfo.Nome = inputName.value;
   orderinfo.Email = inputEmail.value;
+
+  if (parseInt(qtdLanchao.innerText) > 0) orderinfo.Lanchao = qtdLanchao.innerText;
+  if (parseInt(qtdLanche.innerText) > 0) orderinfo.Lanche = qtdLanche.innerText;
+  if (parseInt(qtdLanchinho.innerText) > 0) orderinfo.Lanchinho = qtdLanchinho.innerText;
+  if (parseInt(qtdOvo.innerText) > 0) orderinfo.Ovo = qtdOvo.innerText;
+  if (parseInt(qtdAbacaxi.innerText) > 0) orderinfo.Abacaxi = qtdAbacaxi.innerText;
+  
+  
 
   console.log(orderinfo);
 
