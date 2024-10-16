@@ -16,6 +16,8 @@ const btnMaisOvo = document.querySelector('.btn-mais-ovo');
 const btnMenosAbacaxi = document.querySelector('.btn-menos-abacaxi');
 const qtdAbacaxi = document.querySelector('#qtd-abacaxi');
 const btnMaisAbacaxi = document.querySelector('.btn-mais-abacaxi');
+const batata = document.getElementById('sim');
+const comentario = document.querySelector('textarea')
 
 const atualizarQuantidade = (btnMenos, btnMais, qtdElementos) => {
   btnMenos.addEventListener('click', () => {
@@ -50,7 +52,13 @@ form.addEventListener('submit', (event) => {
   if (parseInt(qtdOvo.innerText) > 0) orderinfo.Ovo = qtdOvo.innerText;
   if (parseInt(qtdAbacaxi.innerText) > 0) orderinfo.Abacaxi = qtdAbacaxi.innerText;
   
+  const molhos = document.querySelectorAll('input[name="molho"]:checked');
   
+   if (molhos.length > 0) orderinfo.Molhos = molhos.length
+
+   if (batata.checked === true) orderinfo.Batata = 'Sim';
+
+  if (comentario !== '') orderinfo.Comentario = comentario.value;
 
   console.log(orderinfo);
 
