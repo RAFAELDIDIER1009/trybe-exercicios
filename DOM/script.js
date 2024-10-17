@@ -17,7 +17,8 @@ const btnMenosAbacaxi = document.querySelector('.btn-menos-abacaxi');
 const qtdAbacaxi = document.querySelector('#qtd-abacaxi');
 const btnMaisAbacaxi = document.querySelector('.btn-mais-abacaxi');
 const batata = document.getElementById('sim');
-const comentario = document.querySelector('textarea')
+const comentario = document.querySelector('textarea');
+const listaNotaFiscal = document.getElementById('orderList');
 
 const atualizarQuantidade = (btnMenos, btnMais, qtdElementos) => {
   btnMenos.addEventListener('click', () => {
@@ -51,16 +52,24 @@ form.addEventListener('submit', (event) => {
   if (parseInt(qtdLanchinho.innerText) > 0) orderinfo.Lanchinho = qtdLanchinho.innerText;
   if (parseInt(qtdOvo.innerText) > 0) orderinfo.Ovo = qtdOvo.innerText;
   if (parseInt(qtdAbacaxi.innerText) > 0) orderinfo.Abacaxi = qtdAbacaxi.innerText;
-  
+
   const molhos = document.querySelectorAll('input[name="molho"]:checked');
-  
-   if (molhos.length > 0) orderinfo.Molhos = molhos.length
 
-   if (batata.checked === true) orderinfo.Batata = 'Sim';
+  if (molhos.length > 0) orderinfo.Molhos = molhos.length
 
-  if (comentario !== '') orderinfo.Comentario = comentario.value;
+  if (batata.checked === true) orderinfo.Batata = 'Sim';
 
-  console.log(orderinfo);
+  if (comentario.value !== '') orderinfo.Comentario = comentario.value;
+
+  const itemsNotaFiscal = Object.entries(orderinfo); 
+
+  itemsNotaFiscal.forEach((item) => {
+    const newLi = document.createElement('li');
+    newLi.innerText = `${item[0]}: ${item[1]}`;
+    listaNotaFiscal.appendChild(newLi);
+  })
+
+  console.log(itemsNotaFiscal);
 
 });
 
