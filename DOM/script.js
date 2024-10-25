@@ -19,6 +19,9 @@ const btnMaisAbacaxi = document.querySelector('.btn-mais-abacaxi');
 const batata = document.getElementById('sim');
 const comentario = document.querySelector('textarea');
 const listaNotaFiscal = document.getElementById('orderList');
+const nota = document.querySelector('.ticket');
+const numeroPedido = document.getElementById('ticket-number');
+const btnRecuperar = document.querySelector('.btn-recuperar');
 
 const atualizarQuantidade = (btnMenos, btnMais, qtdElementos) => {
   btnMenos.addEventListener('click', () => {
@@ -68,6 +71,8 @@ form.addEventListener('submit', (event) => {
     newLi.innerText = `${item[0]}: ${item[1]}`;
     listaNotaFiscal.appendChild(newLi);
   })
+
+ nota.style.display = 'block';
 
   console.log(itemsNotaFiscal);
 
