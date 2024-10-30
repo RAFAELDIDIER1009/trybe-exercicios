@@ -42,8 +42,9 @@ atualizarQuantidade(btnMenosLanchinho, btnMaisLanchinho, qtdLanchinho);
 atualizarQuantidade(btnMenosOvo, btnMaisOvo, qtdOvo);
 atualizarQuantidade(btnMenosAbacaxi, btnMaisAbacaxi, qtdAbacaxi);
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+const criaNotaFiscal = ( ) => {
+
+  listaNotaFiscal.innerHTML = '';
 
   let orderinfo = {};
 
@@ -64,17 +65,38 @@ form.addEventListener('submit', (event) => {
 
   if (comentario.value !== '') orderinfo.Comentario = comentario.value;
 
-  const itemsNotaFiscal = Object.entries(orderinfo); 
+  const itemsNotaFiscal = Object.entries(orderinfo);
+
+  let sum = 0;
 
   itemsNotaFiscal.forEach((item) => {
     const newLi = document.createElement('li');
     newLi.innerText = `${item[0]}: ${item[1]}`;
     listaNotaFiscal.appendChild(newLi);
+
+    if (item[0] === 'Lanchao') sum += parseInt(item[1]) * 20;
+    if (item[0] === 'Lanche') sum += parseInt(item[1]) * 15;
+    if (item[0] === 'Lanchinho') sum += parseInt(item[1]) * 10;
+    if (item[0] === 'Ovo') sum += parseInt(item[1]) * 1.5;
+    if (item[0] === 'Abacaxi') sum += parseInt(item[1]);
+    if (item[0] === 'Molhos') sum += molhos.length * 2;
+    if (item[0] === 'Batata') sum += 2;
+
   })
 
- nota.style.display = 'block';
+  const newH3 = document.createElement('h3');
+  newH3.innerText = 'TOTAL: R$${sum.toFixed(2)}';
+  listaNotaFiscal.appendChild(newH3);
 
-  console.log(itemsNotaFiscal);
 
+  nota.style.display = 'block';
+
+}
+
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  criaNotaFiscal();
 });
 
