@@ -42,30 +42,37 @@ atualizarQuantidade(btnMenosLanchinho, btnMaisLanchinho, qtdLanchinho);
 atualizarQuantidade(btnMenosOvo, btnMaisOvo, qtdOvo);
 atualizarQuantidade(btnMenosAbacaxi, btnMaisAbacaxi, qtdAbacaxi);
 
-const criaNotaFiscal = ( ) => {
+const geraNumeroPedido = () => {
+   const numero = Math.ceil(Math.random() * 100);
+   numeroPedido.innerText = numero;
 
+   return numero;
+}
+
+const criaNotaFiscal = () => {
   listaNotaFiscal.innerHTML = '';
 
-  let orderinfo = {};
+  let orderInfo = {};
 
-  orderinfo.Nome = inputName.value;
-  orderinfo.Email = inputEmail.value;
+  orderInfo.Id = geraNumeroPedido();
+  orderInfo.Nome = inputName.value;
+  orderInfo.Email = inputEmail.value;
 
-  if (parseInt(qtdLanchao.innerText) > 0) orderinfo.Lanchao = qtdLanchao.innerText;
-  if (parseInt(qtdLanche.innerText) > 0) orderinfo.Lanche = qtdLanche.innerText;
-  if (parseInt(qtdLanchinho.innerText) > 0) orderinfo.Lanchinho = qtdLanchinho.innerText;
-  if (parseInt(qtdOvo.innerText) > 0) orderinfo.Ovo = qtdOvo.innerText;
-  if (parseInt(qtdAbacaxi.innerText) > 0) orderinfo.Abacaxi = qtdAbacaxi.innerText;
+  if (parseInt(qtdLanchao.innerText) > 0) orderInfo.Lanchao = qtdLanchao.innerText;
+  if (parseInt(qtdLanche.innerText) > 0) orderInfo.Lanche = qtdLanche.innerText;
+  if (parseInt(qtdLanchinho.innerText) > 0) orderInfo.Lanchinho = qtdLanchinho.innerText;
+  if (parseInt(qtdOvo.innerText) > 0) orderInfo.Ovo = qtdOvo.innerText;
+  if (parseInt(qtdAbacaxi.innerText) > 0) orderInfo.Abacaxi = qtdAbacaxi.innerText;
 
   const molhos = document.querySelectorAll('input[name="molho"]:checked');
 
-  if (molhos.length > 0) orderinfo.Molhos = molhos.length
+  if (molhos.length > 0) orderInfo.Molhos = molhos.length;
 
-  if (batata.checked === true) orderinfo.Batata = 'Sim';
+  if (batata.checked === true) orderInfo.Batata = 'Sim';
 
-  if (comentario.value !== '') orderinfo.Comentario = comentario.value;
+  if (comentario.value !== '') orderInfo.Comentario = comentario.value;
 
-  const itemsNotaFiscal = Object.entries(orderinfo);
+  const itemsNotaFiscal = Object.entries(orderInfo);
 
   let sum = 0;
 
@@ -88,7 +95,7 @@ const criaNotaFiscal = ( ) => {
   newH3.innerText = 'TOTAL: R$${sum.toFixed(2)}';
   listaNotaFiscal.appendChild(newH3);
 
-
+ 
   nota.style.display = 'block';
 
 }

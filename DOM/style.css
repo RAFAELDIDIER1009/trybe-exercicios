@@ -513,17 +513,19 @@ body {
   line-height: 130%;
  font-family: inter;
  margin: 10px 0;
+ text-transform: uppercase;
 }
 
-.itens-lista {
+.items-lista {
   display: flex;
 flex-direction: column;
 gap: 32px;
 align-self: stretch;
 text-align: left;
+
 }
 
-.itens-lista ol {
+.items-lista ol {
   list-style-type: none;
 }
 
