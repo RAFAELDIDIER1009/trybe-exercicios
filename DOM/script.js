@@ -92,18 +92,47 @@ const criaNotaFiscal = () => {
   })
 
   const newH3 = document.createElement('h3');
-  newH3.innerText = 'TOTAL: R$${sum.toFixed(2)}';
+  newH3.innerText = `TOTAL: R$${sum.toFixed(2)}`;
   listaNotaFiscal.appendChild(newH3);
 
- 
+  orderInfo.Total = sum;
+
   nota.style.display = 'block';
 
-}
+  localStorage.setItem('nota', JSON.stringify(orderInfo));
+};
 
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   criaNotaFiscal();
+});
+
+const recuperaNota = () => {
+  listaNotaFiscal.innerHTML = '';
+
+  const objetoRecuperado = JSON.parse(localStorage.nota);
+
+  numeroPedido.innerText = objetoRecuperado.Id; 
+
+  const itemsNotaFiscal = Object.entries(objetoRecuperado);
+
+  itemsNotaFiscal.forEach((item) => {
+    const newLi = document.createElement('li');
+    newLi.innerText = `${item[0]}: ${item[1]}`;
+    listaNotaFiscal.appendChild(newLi);
+  })
+
+  const newH3 = document.createElement('h3');
+  newH3.innerText = `TOTAL: R$${objetoRecuperado.Total.toFixed(2)}`;
+  listaNotaFiscal.appendChild(newH3);
+
+
+  nota.style.display = 'block';
+};
+
+btnRecuperar.addEventListener('click', () => {
+  recuperaNota();
 });
 
